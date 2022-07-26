@@ -1,4 +1,4 @@
-# Terraform CDK acme Provider ~> 2.7
+# Terraform CDK acme Provider ~> 2.10
 
 This repo builds and publishes the Terraform acme Provider bindings for [cdktf](https://cdk.tf).
 
@@ -46,7 +46,7 @@ Find auto-generated docs for this provider here: [./API.md](./API.md)
 
 ## Versioning
 
-This project is explicitly not tracking the Terraform acme Provider version 1:1. In fact, it always tracks `latest` of `~> 2.7` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
+This project is explicitly not tracking the Terraform acme Provider version 1:1. In fact, it always tracks `latest` of `~> 2.10` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
 
 These are the upstream dependencies:
 
