@@ -3,10 +3,10 @@ package acme
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-acme-go/acme/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-acme-go/acme/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-acme-go/acme/internal"
+	"github.com/hashicorp/cdktf-provider-acme-go/acme/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -404,6 +404,10 @@ type Certificate interface {
 	SetCommonName(val *string)
 	CommonNameInput() *string
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -418,6 +422,10 @@ type Certificate interface {
 	DisableCompletePropagationInput() interface{}
 	DnsChallenge() CertificateDnsChallengeList
 	DnsChallengeInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -458,6 +466,10 @@ type Certificate interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	RecursiveNameservers() *[]*string
@@ -673,6 +685,16 @@ func (j *jsiiProxy_Certificate) CommonNameInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Certificate) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -738,6 +760,16 @@ func (j *jsiiProxy_Certificate) DnsChallengeInput() interface{} {
 	_jsii_.Get(
 		j,
 		"dnsChallengeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -993,6 +1025,16 @@ func (j *jsiiProxy_Certificate) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Certificate) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -1172,6 +1214,14 @@ func (j *jsiiProxy_Certificate) SetCommonName(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Certificate) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Certificate) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -1192,6 +1242,14 @@ func (j *jsiiProxy_Certificate) SetDisableCompletePropagation(val interface{}) {
 	_jsii_.Set(
 		j,
 		"disableCompletePropagation",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -1256,6 +1314,14 @@ func (j *jsiiProxy_Certificate) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -1719,13 +1785,19 @@ func (c *jsiiProxy_Certificate) ToTerraform() interface{} {
 
 type CertificateConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#account_key_pem Certificate#account_key_pem}.
 	AccountKeyPem *string `field:"required" json:"accountKeyPem" yaml:"accountKeyPem"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/certificate#certificate_p12_password Certificate#certificate_p12_password}.
@@ -4202,6 +4274,10 @@ type Registration interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -4216,6 +4292,10 @@ type Registration interface {
 	EmailAddressInput() *string
 	ExternalAccountBinding() RegistrationExternalAccountBindingOutputReference
 	ExternalAccountBindingInput() *RegistrationExternalAccountBinding
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -4233,6 +4313,10 @@ type Registration interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	RegistrationUrl() *string
@@ -4318,6 +4402,16 @@ func (j *jsiiProxy_Registration) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Registration) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Registration) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -4388,6 +4482,16 @@ func (j *jsiiProxy_Registration) ExternalAccountBindingInput() *RegistrationExte
 	return returns
 }
 
+func (j *jsiiProxy_Registration) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Registration) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -4453,6 +4557,16 @@ func (j *jsiiProxy_Registration) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -4543,6 +4657,14 @@ func (j *jsiiProxy_Registration) SetAccountKeyPem(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Registration) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Registration) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -4567,6 +4689,14 @@ func (j *jsiiProxy_Registration) SetEmailAddress(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Registration) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Registration) SetId(val *string) {
 	_jsii_.Set(
 		j,
@@ -4587,6 +4717,14 @@ func (j *jsiiProxy_Registration) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Registration) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -4866,13 +5004,19 @@ func (r *jsiiProxy_Registration) ToTerraform() interface{} {
 
 type RegistrationConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#account_key_pem Registration#account_key_pem}.
 	AccountKeyPem *string `field:"required" json:"accountKeyPem" yaml:"accountKeyPem"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/acme/r/registration#email_address Registration#email_address}.
