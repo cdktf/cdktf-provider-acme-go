@@ -208,6 +208,9 @@ func (j *jsiiProxy_AcmeProvider) TerraformResourceType() *string {
 func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProviderConfig) AcmeProvider {
 	_init_.Initialize()
 
+	if err := validateNewAcmeProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_AcmeProvider{}
 
 	_jsii_.Create(
@@ -230,7 +233,7 @@ func NewAcmeProvider_Override(a AcmeProvider, scope constructs.Construct, id *st
 	)
 }
 
-func (j *jsiiProxy_AcmeProvider) SetAlias(val *string) {
+func (j *jsiiProxy_AcmeProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -238,7 +241,7 @@ func (j *jsiiProxy_AcmeProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_AcmeProvider) SetServerUrl(val *string) {
+func (j *jsiiProxy_AcmeProvider)SetServerUrl(val *string) {
 	_jsii_.Set(
 		j,
 		"serverUrl",
@@ -266,6 +269,9 @@ func (j *jsiiProxy_AcmeProvider) SetServerUrl(val *string) {
 func AcmeProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateAcmeProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -290,6 +296,9 @@ func AcmeProvider_TfResourceType() *string {
 }
 
 func (a *jsiiProxy_AcmeProvider) AddOverride(path *string, value interface{}) {
+	if err := a.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		a,
 		"addOverride",
@@ -298,6 +307,9 @@ func (a *jsiiProxy_AcmeProvider) AddOverride(path *string, value interface{}) {
 }
 
 func (a *jsiiProxy_AcmeProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := a.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		a,
 		"overrideLogicalId",

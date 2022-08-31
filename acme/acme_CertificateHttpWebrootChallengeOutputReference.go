@@ -174,6 +174,9 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) TerraformReso
 func NewCertificateHttpWebrootChallengeOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) CertificateHttpWebrootChallengeOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewCertificateHttpWebrootChallengeOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_CertificateHttpWebrootChallengeOutputReference{}
 
 	_jsii_.Create(
@@ -195,7 +198,10 @@ func NewCertificateHttpWebrootChallengeOutputReference_Override(c CertificateHtt
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -203,7 +209,10 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetComplexObj
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -211,7 +220,10 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetComplexObj
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetDirectory(val *string) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetDirectory(val *string) {
+	if err := j.validateSetDirectoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"directory",
@@ -219,7 +231,10 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetDirectory(
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetInternalValue(val *CertificateHttpWebrootChallenge) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetInternalValue(val *CertificateHttpWebrootChallenge) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -227,7 +242,10 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetInternalVa
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -235,7 +253,10 @@ func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetTerraformA
 	)
 }
 
-func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_CertificateHttpWebrootChallengeOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -257,6 +278,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) ComputeFqn() 
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -270,6 +294,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetAnyMapAttr
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -283,6 +310,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetBooleanAtt
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -296,6 +326,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetBooleanMap
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -309,6 +342,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetListAttrib
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -322,6 +358,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberAttr
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -335,6 +374,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberList
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -348,6 +390,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetNumberMapA
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -361,6 +406,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetStringAttr
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -387,6 +435,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) Interpolation
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -400,6 +451,9 @@ func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) Interpolation
 }
 
 func (c *jsiiProxy_CertificateHttpWebrootChallengeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
