@@ -16,6 +16,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateDomain", GoGetter: "CertificateDomain"},
+			_jsii_.MemberProperty{JsiiProperty: "certificateNotAfter", GoGetter: "CertificateNotAfter"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12", GoGetter: "CertificateP12"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12Password", GoGetter: "CertificateP12Password"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateP12PasswordInput", GoGetter: "CertificateP12PasswordInput"},

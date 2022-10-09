@@ -18,6 +18,7 @@ type Certificate interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CertificateDomain() *string
+	CertificateNotAfter() *string
 	CertificateP12() *string
 	CertificateP12Password() *string
 	SetCertificateP12Password(val *string)
@@ -217,6 +218,16 @@ func (j *jsiiProxy_Certificate) CertificateDomain() *string {
 	_jsii_.Get(
 		j,
 		"certificateDomain",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) CertificateNotAfter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"certificateNotAfter",
 		&returns,
 	)
 	return returns
