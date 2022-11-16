@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package registration
 
@@ -58,6 +57,14 @@ func (r *jsiiProxy_Registration) validatePutExternalAccountBindingParameters(val
 }
 
 func validateRegistration_IsConstructParameters(x interface{}) error {
+	return nil
+}
+
+func validateRegistration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRegistration_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
