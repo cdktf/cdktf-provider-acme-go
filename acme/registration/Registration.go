@@ -2,14 +2,14 @@ package registration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v5/registration/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v6/registration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration acme_registration}.
 type Registration interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -24,9 +24,9 @@ type Registration interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -166,8 +166,8 @@ func (j *jsiiProxy_Registration) ConstructNodeMetadata() *map[string]interface{}
 	return returns
 }
 
-func (j *jsiiProxy_Registration) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Registration) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -367,7 +367,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -385,7 +385,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/acme/r/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
@@ -418,7 +418,10 @@ func (j *jsiiProxy_Registration)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Registration)SetCount(val *float64) {
+func (j *jsiiProxy_Registration)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

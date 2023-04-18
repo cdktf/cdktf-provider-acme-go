@@ -1,3 +1,3 @@
 # `acme_registration`
 
-Refer to the Terraform Registory for docs: [`acme_registration`](https://www.terraform.io/docs/providers/acme/r/registration).
+Refer to the Terraform Registory for docs: [`acme_registration`](https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/registration).

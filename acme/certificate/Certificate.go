@@ -2,14 +2,14 @@ package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v5/certificate/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v6/certificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -38,9 +38,9 @@ type Certificate interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -343,8 +343,8 @@ func (j *jsiiProxy_Certificate) ConstructNodeMetadata() *map[string]interface{} 
 	return returns
 }
 
-func (j *jsiiProxy_Certificate) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Certificate) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -794,7 +794,7 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -812,7 +812,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/acme/r/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.13.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -878,7 +878,10 @@ func (j *jsiiProxy_Certificate)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Certificate)SetCount(val *float64) {
+func (j *jsiiProxy_Certificate)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
