@@ -2,14 +2,14 @@ package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v7/certificate/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.15.0/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -794,7 +794,7 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.15.0/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -812,7 +812,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.15.0/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.15.1/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
