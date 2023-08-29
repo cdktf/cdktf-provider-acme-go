@@ -1,4 +1,4 @@
-module github.com/cdktf/cdktf-provider-acme-go/acme/v10
+module github.com/cdktf/cdktf-provider-acme-go/acme/v9
 
 go 1.18
 
