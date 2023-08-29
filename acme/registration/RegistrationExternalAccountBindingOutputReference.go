@@ -1,10 +1,13 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package registration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v10/jsii"
 
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v8/registration/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v10/registration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

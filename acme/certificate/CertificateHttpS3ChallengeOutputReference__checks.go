@@ -13,7 +13,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetAnyMapAtt
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -29,7 +29,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetBooleanAt
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -37,7 +37,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetBooleanMa
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -45,7 +45,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetListAttri
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -53,7 +53,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberAtt
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -61,7 +61,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberLis
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -69,7 +69,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetNumberMap
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -77,7 +77,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetStringAtt
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -85,7 +85,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateGetStringMap
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
 	if property == nil {
 		return fmt.Errorf("parameter property is required, but nil was provided")
 	}
@@ -93,7 +93,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateInterpolatio
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -101,7 +101,7 @@ func (c *jsiiProxy_CertificateHttpChallengeOutputReference) validateResolveParam
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
 		// ok
@@ -158,7 +158,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetComplexOb
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -166,7 +166,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetComplexOb
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetInternalValueParameters(val *CertificateHttpChallenge) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetInternalValueParameters(val *CertificateHttpS3Challenge) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -174,7 +174,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetInternalV
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetPortParameters(val *float64) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetS3BucketParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -182,7 +182,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetPortParam
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetProxyHeaderParameters(val *string) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -190,7 +190,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetProxyHead
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -198,15 +198,7 @@ func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetTerraform
 	return nil
 }
 
-func (j *jsiiProxy_CertificateHttpChallengeOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func validateNewCertificateHttpChallengeOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewCertificateHttpS3ChallengeOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

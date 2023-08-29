@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v8/certificate/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v10/certificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -62,6 +65,8 @@ type Certificate interface {
 	HttpChallengeInput() *CertificateHttpChallenge
 	HttpMemcachedChallenge() CertificateHttpMemcachedChallengeOutputReference
 	HttpMemcachedChallengeInput() *CertificateHttpMemcachedChallenge
+	HttpS3Challenge() CertificateHttpS3ChallengeOutputReference
+	HttpS3ChallengeInput() *CertificateHttpS3Challenge
 	HttpWebrootChallenge() CertificateHttpWebrootChallengeOutputReference
 	HttpWebrootChallengeInput() *CertificateHttpWebrootChallenge
 	Id() *string
@@ -145,6 +150,7 @@ type Certificate interface {
 	PutDnsChallenge(value interface{})
 	PutHttpChallenge(value *CertificateHttpChallenge)
 	PutHttpMemcachedChallenge(value *CertificateHttpMemcachedChallenge)
+	PutHttpS3Challenge(value *CertificateHttpS3Challenge)
 	PutHttpWebrootChallenge(value *CertificateHttpWebrootChallenge)
 	PutTlsChallenge(value *CertificateTlsChallenge)
 	ResetCertificateP12Password()
@@ -154,6 +160,7 @@ type Certificate interface {
 	ResetDnsChallenge()
 	ResetHttpChallenge()
 	ResetHttpMemcachedChallenge()
+	ResetHttpS3Challenge()
 	ResetHttpWebrootChallenge()
 	ResetId()
 	ResetKeyType()
@@ -468,6 +475,26 @@ func (j *jsiiProxy_Certificate) HttpMemcachedChallengeInput() *CertificateHttpMe
 	_jsii_.Get(
 		j,
 		"httpMemcachedChallengeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) HttpS3Challenge() CertificateHttpS3ChallengeOutputReference {
+	var returns CertificateHttpS3ChallengeOutputReference
+	_jsii_.Get(
+		j,
+		"httpS3Challenge",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) HttpS3ChallengeInput() *CertificateHttpS3Challenge {
+	var returns *CertificateHttpS3Challenge
+	_jsii_.Get(
+		j,
+		"httpS3ChallengeInput",
 		&returns,
 	)
 	return returns
@@ -794,7 +821,7 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -812,7 +839,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.16.1/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -1344,6 +1371,17 @@ func (c *jsiiProxy_Certificate) PutHttpMemcachedChallenge(value *CertificateHttp
 	)
 }
 
+func (c *jsiiProxy_Certificate) PutHttpS3Challenge(value *CertificateHttpS3Challenge) {
+	if err := c.validatePutHttpS3ChallengeParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putHttpS3Challenge",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_Certificate) PutHttpWebrootChallenge(value *CertificateHttpWebrootChallenge) {
 	if err := c.validatePutHttpWebrootChallengeParameters(value); err != nil {
 		panic(err)
@@ -1418,6 +1456,14 @@ func (c *jsiiProxy_Certificate) ResetHttpMemcachedChallenge() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetHttpMemcachedChallenge",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetHttpS3Challenge() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetHttpS3Challenge",
 		nil, // no parameters
 	)
 }

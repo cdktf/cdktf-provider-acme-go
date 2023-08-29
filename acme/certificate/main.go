@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package certificate
 
 import (
@@ -50,6 +53,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "httpChallengeInput", GoGetter: "HttpChallengeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "httpMemcachedChallenge", GoGetter: "HttpMemcachedChallenge"},
 			_jsii_.MemberProperty{JsiiProperty: "httpMemcachedChallengeInput", GoGetter: "HttpMemcachedChallengeInput"},
+			_jsii_.MemberProperty{JsiiProperty: "httpS3Challenge", GoGetter: "HttpS3Challenge"},
+			_jsii_.MemberProperty{JsiiProperty: "httpS3ChallengeInput", GoGetter: "HttpS3ChallengeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "httpWebrootChallenge", GoGetter: "HttpWebrootChallenge"},
 			_jsii_.MemberProperty{JsiiProperty: "httpWebrootChallengeInput", GoGetter: "HttpWebrootChallengeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
@@ -75,6 +80,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putDnsChallenge", GoMethod: "PutDnsChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "putHttpChallenge", GoMethod: "PutHttpChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "putHttpMemcachedChallenge", GoMethod: "PutHttpMemcachedChallenge"},
+			_jsii_.MemberMethod{JsiiMethod: "putHttpS3Challenge", GoMethod: "PutHttpS3Challenge"},
 			_jsii_.MemberMethod{JsiiMethod: "putHttpWebrootChallenge", GoMethod: "PutHttpWebrootChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "putTlsChallenge", GoMethod: "PutTlsChallenge"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
@@ -87,6 +93,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetDnsChallenge", GoMethod: "ResetDnsChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpChallenge", GoMethod: "ResetHttpChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpMemcachedChallenge", GoMethod: "ResetHttpMemcachedChallenge"},
+			_jsii_.MemberMethod{JsiiMethod: "resetHttpS3Challenge", GoMethod: "ResetHttpS3Challenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetHttpWebrootChallenge", GoMethod: "ResetHttpWebrootChallenge"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetKeyType", GoMethod: "ResetKeyType"},
@@ -261,6 +268,44 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_CertificateHttpMemcachedChallengeOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-acme.certificate.CertificateHttpS3Challenge",
+		reflect.TypeOf((*CertificateHttpS3Challenge)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference",
+		reflect.TypeOf((*CertificateHttpS3ChallengeOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "s3Bucket", GoGetter: "S3Bucket"},
+			_jsii_.MemberProperty{JsiiProperty: "s3BucketInput", GoGetter: "S3BucketInput"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_CertificateHttpS3ChallengeOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

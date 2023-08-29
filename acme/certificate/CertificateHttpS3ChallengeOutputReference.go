@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type CertificateTlsChallengeOutputReference interface {
+type CertificateHttpS3ChallengeOutputReference interface {
 	cdktf.ComplexObject
 	// the index of the complex object in a list.
 	// Experimental.
@@ -30,11 +30,11 @@ type CertificateTlsChallengeOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CertificateTlsChallenge
-	SetInternalValue(val *CertificateTlsChallenge)
-	Port() *float64
-	SetPort(val *float64)
-	PortInput() *float64
+	InternalValue() *CertificateHttpS3Challenge
+	SetInternalValue(val *CertificateHttpS3Challenge)
+	S3Bucket() *string
+	SetS3Bucket(val *string)
+	S3BucketInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -67,7 +67,6 @@ type CertificateTlsChallengeOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	ResetPort()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -78,12 +77,12 @@ type CertificateTlsChallengeOutputReference interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for CertificateTlsChallengeOutputReference
-type jsiiProxy_CertificateTlsChallengeOutputReference struct {
+// The jsii proxy struct for CertificateHttpS3ChallengeOutputReference
+type jsiiProxy_CertificateHttpS3ChallengeOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) ComplexObjectIndex() interface{} {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -93,7 +92,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) ComplexObjectIndex() 
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) ComplexObjectIsFromSet() *bool {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) ComplexObjectIsFromSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -103,7 +102,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) ComplexObjectIsFromSe
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) CreationStack() *[]*string {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -113,7 +112,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) CreationStack() *[]*s
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) Fqn() *string {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -123,8 +122,8 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) InternalValue() *CertificateTlsChallenge {
-	var returns *CertificateTlsChallenge
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) InternalValue() *CertificateHttpS3Challenge {
+	var returns *CertificateHttpS3Challenge
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -133,27 +132,27 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) InternalValue() *Cert
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) Port() *float64 {
-	var returns *float64
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) S3Bucket() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
-		"port",
+		"s3Bucket",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) PortInput() *float64 {
-	var returns *float64
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) S3BucketInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
-		"portInput",
+		"s3BucketInput",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) TerraformAttribute() *string {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -163,7 +162,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) TerraformAttribute() 
 	return returns
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -174,16 +173,16 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference) TerraformResource() c
 }
 
 
-func NewCertificateTlsChallengeOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) CertificateTlsChallengeOutputReference {
+func NewCertificateHttpS3ChallengeOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) CertificateHttpS3ChallengeOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewCertificateTlsChallengeOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewCertificateHttpS3ChallengeOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_CertificateTlsChallengeOutputReference{}
+	j := jsiiProxy_CertificateHttpS3ChallengeOutputReference{}
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.certificate.CertificateTlsChallengeOutputReference",
+		"@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
@@ -191,17 +190,17 @@ func NewCertificateTlsChallengeOutputReference(terraformResource cdktf.IInterpol
 	return &j
 }
 
-func NewCertificateTlsChallengeOutputReference_Override(c CertificateTlsChallengeOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewCertificateHttpS3ChallengeOutputReference_Override(c CertificateHttpS3ChallengeOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-acme.certificate.CertificateTlsChallengeOutputReference",
+		"@cdktf/provider-acme.certificate.CertificateHttpS3ChallengeOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		c,
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
 	}
@@ -212,7 +211,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetComplexObjectIndex(
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetComplexObjectIsFromSet(val *bool) {
 	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -223,7 +222,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetComplexObjectIsFrom
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetInternalValue(val *CertificateTlsChallenge) {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetInternalValue(val *CertificateHttpS3Challenge) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -234,18 +233,18 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetInternalValue(val *
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetPort(val *float64) {
-	if err := j.validateSetPortParameters(val); err != nil {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetS3Bucket(val *string) {
+	if err := j.validateSetS3BucketParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"port",
+		"s3Bucket",
 		val,
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -256,7 +255,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetTerraformAttribute(
 	)
 }
 
-func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_CertificateHttpS3ChallengeOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -267,7 +266,7 @@ func (j *jsiiProxy_CertificateTlsChallengeOutputReference)SetTerraformResource(v
 	)
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) ComputeFqn() *string {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -280,7 +279,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) ComputeFqn() *string 
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
 	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -296,7 +295,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetAnyMapAttribute(te
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -312,7 +311,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetBooleanAttribute(t
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
 	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -328,7 +327,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetBooleanMapAttribut
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
 	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -344,7 +343,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetListAttribute(terr
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
 	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -360,7 +359,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberAttribute(te
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
 	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -376,7 +375,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberListAttribut
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
 	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -392,7 +391,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetNumberMapAttribute
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetStringAttribute(terraformAttribute *string) *string {
 	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -408,7 +407,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetStringAttribute(te
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
 	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -424,7 +423,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) GetStringMapAttribute
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) InterpolationAsList() cdktf.IResolvable {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) InterpolationAsList() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -437,7 +436,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) InterpolationAsList()
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
 	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
 		panic(err)
 	}
@@ -453,15 +452,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) InterpolationForAttri
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) ResetPort() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetPort",
-		nil, // no parameters
-	)
-}
-
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
 	if err := c.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
@@ -477,7 +468,7 @@ func (c *jsiiProxy_CertificateTlsChallengeOutputReference) Resolve(_context cdkt
 	return returns
 }
 
-func (c *jsiiProxy_CertificateTlsChallengeOutputReference) ToString() *string {
+func (c *jsiiProxy_CertificateHttpS3ChallengeOutputReference) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
