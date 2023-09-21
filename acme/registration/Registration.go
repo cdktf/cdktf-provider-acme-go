@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs/resources/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/registration acme_registration}.
 type Registration interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -370,7 +370,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -388,7 +388,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.1/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
