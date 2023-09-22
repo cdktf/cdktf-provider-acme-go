@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.18.0/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -31,6 +31,9 @@ type Certificate interface {
 	SetCertificateRequestPem(val *string)
 	CertificateRequestPemInput() *string
 	CertificateUrl() *string
+	CertTimeout() *float64
+	SetCertTimeout(val *float64)
+	CertTimeoutInput() *float64
 	CommonName() *string
 	SetCommonName(val *string)
 	CommonNameInput() *string
@@ -155,6 +158,7 @@ type Certificate interface {
 	PutTlsChallenge(value *CertificateTlsChallenge)
 	ResetCertificateP12Password()
 	ResetCertificateRequestPem()
+	ResetCertTimeout()
 	ResetCommonName()
 	ResetDisableCompletePropagation()
 	ResetDnsChallenge()
@@ -305,6 +309,26 @@ func (j *jsiiProxy_Certificate) CertificateUrl() *string {
 	_jsii_.Get(
 		j,
 		"certificateUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) CertTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"certTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) CertTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"certTimeoutInput",
 		&returns,
 	)
 	return returns
@@ -821,7 +845,7 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.18.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -839,7 +863,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.17.2/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.18.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -879,6 +903,17 @@ func (j *jsiiProxy_Certificate)SetCertificateRequestPem(val *string) {
 	_jsii_.Set(
 		j,
 		"certificateRequestPem",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetCertTimeout(val *float64) {
+	if err := j.validateSetCertTimeoutParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"certTimeout",
 		val,
 	)
 }
@@ -1416,6 +1451,14 @@ func (c *jsiiProxy_Certificate) ResetCertificateRequestPem() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCertificateRequestPem",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetCertTimeout() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetCertTimeout",
 		nil, // no parameters
 	)
 }

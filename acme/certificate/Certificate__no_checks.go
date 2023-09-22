@@ -103,6 +103,10 @@ func (j *jsiiProxy_Certificate) validateSetCertificateRequestPemParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_Certificate) validateSetCertTimeoutParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Certificate) validateSetCommonNameParameters(val *string) error {
 	return nil
 }

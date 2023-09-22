@@ -248,6 +248,14 @@ func (j *jsiiProxy_Certificate) validateSetCertificateRequestPemParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_Certificate) validateSetCertTimeoutParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Certificate) validateSetCommonNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
