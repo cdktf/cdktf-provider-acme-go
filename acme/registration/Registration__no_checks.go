@@ -7,6 +7,10 @@ package registration
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_Registration) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Registration) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (r *jsiiProxy_Registration) validateGetStringMapAttributeParameters(terrafo
 	return nil
 }
 
+func (r *jsiiProxy_Registration) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_Registration) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_Registration) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (r *jsiiProxy_Registration) validateOverrideLogicalIdParameters(newLogicalI
 }
 
 func (r *jsiiProxy_Registration) validatePutExternalAccountBindingParameters(value *RegistrationExternalAccountBinding) error {
+	return nil
+}
+
+func validateRegistration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

@@ -16,6 +16,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "accountKeyPem", GoGetter: "AccountKeyPem"},
 			_jsii_.MemberProperty{JsiiProperty: "accountKeyPemInput", GoGetter: "AccountKeyPemInput"},
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateDomain", GoGetter: "CertificateDomain"},
@@ -61,6 +62,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "httpWebrootChallengeInput", GoGetter: "HttpWebrootChallengeInput"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "issuerPem", GoGetter: "IssuerPem"},
 			_jsii_.MemberProperty{JsiiProperty: "keyType", GoGetter: "KeyType"},
@@ -68,6 +70,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
 			_jsii_.MemberProperty{JsiiProperty: "minDaysRemaining", GoGetter: "MinDaysRemaining"},
 			_jsii_.MemberProperty{JsiiProperty: "minDaysRemainingInput", GoGetter: "MinDaysRemainingInput"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "mustStaple", GoGetter: "MustStaple"},
 			_jsii_.MemberProperty{JsiiProperty: "mustStapleInput", GoGetter: "MustStapleInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
