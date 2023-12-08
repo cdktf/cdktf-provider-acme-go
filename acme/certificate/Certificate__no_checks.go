@@ -59,7 +59,15 @@ func (c *jsiiProxy_Certificate) validateInterpolationForAttributeParameters(terr
 	return nil
 }
 
+func (c *jsiiProxy_Certificate) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (c *jsiiProxy_Certificate) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (c *jsiiProxy_Certificate) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
@@ -176,6 +184,10 @@ func (j *jsiiProxy_Certificate) validateSetRecursiveNameserversParameters(val *[
 }
 
 func (j *jsiiProxy_Certificate) validateSetRevokeCertificateOnDestroyParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetRevokeCertificateReasonParameters(val *string) error {
 	return nil
 }
 
