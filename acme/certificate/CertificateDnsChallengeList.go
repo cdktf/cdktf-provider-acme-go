@@ -5,9 +5,9 @@ package certificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-acme-go/acme/v11/jsii"
 
-	"github.com/cdktf/cdktf-provider-acme-go/acme/v10/certificate/internal"
+	"github.com/cdktf/cdktf-provider-acme-go/acme/v11/certificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -31,6 +31,11 @@ type CertificateDnsChallengeList interface {
 	// whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
 	WrapsSet() *bool
 	SetWrapsSet(val *bool)
+	// Creating an iterator for this complex list.
+	//
+	// The list will be converted into a map with the mapKeyAttributeName as the key.
+	// Experimental.
+	AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator
 	// Experimental.
 	ComputeFqn() *string
 	Get(index *float64) CertificateDnsChallengeOutputReference
@@ -179,6 +184,22 @@ func (j *jsiiProxy_CertificateDnsChallengeList)SetWrapsSet(val *bool) {
 		"wrapsSet",
 		val,
 	)
+}
+
+func (c *jsiiProxy_CertificateDnsChallengeList) AllWithMapKey(mapKeyAttributeName *string) cdktf.DynamicListTerraformIterator {
+	if err := c.validateAllWithMapKeyParameters(mapKeyAttributeName); err != nil {
+		panic(err)
+	}
+	var returns cdktf.DynamicListTerraformIterator
+
+	_jsii_.Invoke(
+		c,
+		"allWithMapKey",
+		[]interface{}{mapKeyAttributeName},
+		&returns,
+	)
+
+	return returns
 }
 
 func (c *jsiiProxy_CertificateDnsChallengeList) ComputeFqn() *string {
