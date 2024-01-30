@@ -5,11 +5,11 @@ package provider
 
 
 type AcmeProviderConfig struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.19.1/docs#server_url AcmeProvider#server_url}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.20.0/docs#server_url AcmeProvider#server_url}.
 	ServerUrl *string `field:"required" json:"serverUrl" yaml:"serverUrl"`
 	// Alias name.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.19.1/docs#alias AcmeProvider#alias}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.20.0/docs#alias AcmeProvider#alias}
 	Alias *string `field:"optional" json:"alias" yaml:"alias"`
 }
 
