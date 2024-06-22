@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.23.1/docs acme}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs acme}.
 type AcmeProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -209,7 +209,7 @@ func (j *jsiiProxy_AcmeProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.1/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs acme} Resource.
 func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProviderConfig) AcmeProvider {
 	_init_.Initialize()
 
@@ -227,7 +227,7 @@ func NewAcmeProvider(scope constructs.Construct, id *string, config *AcmeProvide
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.1/docs acme} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs acme} Resource.
 func NewAcmeProvider_Override(a AcmeProvider, scope constructs.Construct, id *string, config *AcmeProviderConfig) {
 	_init_.Initialize()
 

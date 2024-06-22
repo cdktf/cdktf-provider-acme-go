@@ -1,6 +1,6 @@
-# CDKTF Go bindings for vancluever/acme provider version 2.23.1
+# CDKTF Go bindings for vancluever/acme provider version 2.23.2
 
-This repo builds and publishes the [Terraform acme provider](https://registry.terraform.io/providers/vancluever/acme/2.23.1/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform acme provider](https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
@@ -23,7 +23,7 @@ This project is explicitly not tracking the Terraform acme provider version 1:1.
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform acme provider](https://registry.terraform.io/providers/vancluever/acme/2.23.1)
+* [Terraform acme provider](https://registry.terraform.io/providers/vancluever/acme/2.23.2)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
