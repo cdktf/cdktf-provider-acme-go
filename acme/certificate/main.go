@@ -27,6 +27,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "certificatePem", GoGetter: "CertificatePem"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateRequestPem", GoGetter: "CertificateRequestPem"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateRequestPemInput", GoGetter: "CertificateRequestPemInput"},
+			_jsii_.MemberProperty{JsiiProperty: "certificateSerial", GoGetter: "CertificateSerial"},
 			_jsii_.MemberProperty{JsiiProperty: "certificateUrl", GoGetter: "CertificateUrl"},
 			_jsii_.MemberProperty{JsiiProperty: "certTimeout", GoGetter: "CertTimeout"},
 			_jsii_.MemberProperty{JsiiProperty: "certTimeoutInput", GoGetter: "CertTimeoutInput"},

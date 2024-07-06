@@ -95,7 +95,19 @@ func validateRegistration_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_Registration) validateSetAccountKeyAlgorithmParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Registration) validateSetAccountKeyEcdsaCurveParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Registration) validateSetAccountKeyPemParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Registration) validateSetAccountKeyRsaBitsParameters(val *float64) error {
 	return nil
 }
 

@@ -12,12 +12,21 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration acme_registration}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration acme_registration}.
 type Registration interface {
 	cdktf.TerraformResource
+	AccountKeyAlgorithm() *string
+	SetAccountKeyAlgorithm(val *string)
+	AccountKeyAlgorithmInput() *string
+	AccountKeyEcdsaCurve() *string
+	SetAccountKeyEcdsaCurve(val *string)
+	AccountKeyEcdsaCurveInput() *string
 	AccountKeyPem() *string
 	SetAccountKeyPem(val *string)
 	AccountKeyPemInput() *string
+	AccountKeyRsaBits() *float64
+	SetAccountKeyRsaBits(val *float64)
+	AccountKeyRsaBitsInput() *float64
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -117,6 +126,10 @@ type Registration interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutExternalAccountBinding(value *RegistrationExternalAccountBinding)
+	ResetAccountKeyAlgorithm()
+	ResetAccountKeyEcdsaCurve()
+	ResetAccountKeyPem()
+	ResetAccountKeyRsaBits()
 	ResetExternalAccountBinding()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -140,6 +153,46 @@ type jsiiProxy_Registration struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_Registration) AccountKeyAlgorithm() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountKeyAlgorithm",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) AccountKeyAlgorithmInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountKeyAlgorithmInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) AccountKeyEcdsaCurve() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountKeyEcdsaCurve",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) AccountKeyEcdsaCurveInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountKeyEcdsaCurveInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Registration) AccountKeyPem() *string {
 	var returns *string
 	_jsii_.Get(
@@ -155,6 +208,26 @@ func (j *jsiiProxy_Registration) AccountKeyPemInput() *string {
 	_jsii_.Get(
 		j,
 		"accountKeyPemInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) AccountKeyRsaBits() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"accountKeyRsaBits",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Registration) AccountKeyRsaBitsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"accountKeyRsaBitsInput",
 		&returns,
 	)
 	return returns
@@ -391,7 +464,7 @@ func (j *jsiiProxy_Registration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration acme_registration} Resource.
 func NewRegistration(scope constructs.Construct, id *string, config *RegistrationConfig) Registration {
 	_init_.Initialize()
 
@@ -409,7 +482,7 @@ func NewRegistration(scope constructs.Construct, id *string, config *Registratio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.23.2/docs/resources/registration acme_registration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.24.0/docs/resources/registration acme_registration} Resource.
 func NewRegistration_Override(r Registration, scope constructs.Construct, id *string, config *RegistrationConfig) {
 	_init_.Initialize()
 
@@ -420,6 +493,28 @@ func NewRegistration_Override(r Registration, scope constructs.Construct, id *st
 	)
 }
 
+func (j *jsiiProxy_Registration)SetAccountKeyAlgorithm(val *string) {
+	if err := j.validateSetAccountKeyAlgorithmParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accountKeyAlgorithm",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Registration)SetAccountKeyEcdsaCurve(val *string) {
+	if err := j.validateSetAccountKeyEcdsaCurveParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accountKeyEcdsaCurve",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Registration)SetAccountKeyPem(val *string) {
 	if err := j.validateSetAccountKeyPemParameters(val); err != nil {
 		panic(err)
@@ -427,6 +522,17 @@ func (j *jsiiProxy_Registration)SetAccountKeyPem(val *string) {
 	_jsii_.Set(
 		j,
 		"accountKeyPem",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Registration)SetAccountKeyRsaBits(val *float64) {
+	if err := j.validateSetAccountKeyRsaBitsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accountKeyRsaBits",
 		val,
 	)
 }
@@ -882,6 +988,38 @@ func (r *jsiiProxy_Registration) PutExternalAccountBinding(value *RegistrationEx
 		r,
 		"putExternalAccountBinding",
 		[]interface{}{value},
+	)
+}
+
+func (r *jsiiProxy_Registration) ResetAccountKeyAlgorithm() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAccountKeyAlgorithm",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Registration) ResetAccountKeyEcdsaCurve() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAccountKeyEcdsaCurve",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Registration) ResetAccountKeyPem() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAccountKeyPem",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_Registration) ResetAccountKeyRsaBits() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAccountKeyRsaBits",
+		nil, // no parameters
 	)
 }
 
