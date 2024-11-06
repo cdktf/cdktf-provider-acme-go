@@ -1,3 +1,3 @@
 # `provider`
 
-Refer to the Terraform Registry for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.26.0/docs).
+Refer to the Terraform Registry for docs: [`acme`](https://registry.terraform.io/providers/vancluever/acme/2.27.0/docs).
