@@ -1,3 +1,3 @@
 # `acme_certificate`
 
-Refer to the Terraform Registry for docs: [`acme_certificate`](https://registry.terraform.io/providers/vancluever/acme/2.27.0/docs/resources/certificate).
+Refer to the Terraform Registry for docs: [`acme_certificate`](https://registry.terraform.io/providers/vancluever/acme/2.28.0/docs/resources/certificate).
