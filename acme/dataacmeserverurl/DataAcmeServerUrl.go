@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.28.0/docs/data-sources/server_url acme_server_url}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.28.1/docs/data-sources/server_url acme_server_url}.
 type DataAcmeServerUrl interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataAcmeServerUrl) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.28.0/docs/data-sources/server_url acme_server_url} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.28.1/docs/data-sources/server_url acme_server_url} Data Source.
 func NewDataAcmeServerUrl(scope constructs.Construct, id *string, config *DataAcmeServerUrlConfig) DataAcmeServerUrl {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataAcmeServerUrl(scope constructs.Construct, id *string, config *DataAc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.28.0/docs/data-sources/server_url acme_server_url} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.28.1/docs/data-sources/server_url acme_server_url} Data Source.
 func NewDataAcmeServerUrl_Override(d DataAcmeServerUrl, scope constructs.Construct, id *string, config *DataAcmeServerUrlConfig) {
 	_init_.Initialize()
 
