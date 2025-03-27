@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.30.3/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.31.0/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -99,6 +99,9 @@ type Certificate interface {
 	SetPreferredChain(val *string)
 	PreferredChainInput() *string
 	PrivateKeyPem() *string
+	Profile() *string
+	SetProfile(val *string)
+	ProfileInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -197,6 +200,7 @@ type Certificate interface {
 	ResetOverrideLogicalId()
 	ResetPreCheckDelay()
 	ResetPreferredChain()
+	ResetProfile()
 	ResetRecursiveNameservers()
 	ResetRevokeCertificateOnDestroy()
 	ResetRevokeCertificateReason()
@@ -740,6 +744,26 @@ func (j *jsiiProxy_Certificate) PrivateKeyPem() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) Profile() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"profile",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) ProfileInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"profileInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Certificate) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -901,7 +925,7 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.30.3/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.31.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -919,7 +943,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.30.3/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.31.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -1107,6 +1131,17 @@ func (j *jsiiProxy_Certificate)SetPreferredChain(val *string) {
 	_jsii_.Set(
 		j,
 		"preferredChain",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetProfile(val *string) {
+	if err := j.validateSetProfileParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"profile",
 		val,
 	)
 }
@@ -1725,6 +1760,14 @@ func (c *jsiiProxy_Certificate) ResetPreferredChain() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetPreferredChain",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetProfile() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetProfile",
 		nil, // no parameters
 	)
 }

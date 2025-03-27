@@ -175,6 +175,10 @@ func (j *jsiiProxy_Certificate) validateSetPreferredChainParameters(val *string)
 	return nil
 }
 
+func (j *jsiiProxy_Certificate) validateSetProfileParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Certificate) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }
