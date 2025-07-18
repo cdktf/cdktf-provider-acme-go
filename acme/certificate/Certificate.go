@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate}.
+// Represents a {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate}.
 type Certificate interface {
 	cdktf.TerraformResource
 	AccountKeyPem() *string
@@ -115,6 +115,17 @@ type Certificate interface {
 	RecursiveNameservers() *[]*string
 	SetRecursiveNameservers(val *[]*string)
 	RecursiveNameserversInput() *[]*string
+	RenewalInfoExplanationUrl() *string
+	RenewalInfoIgnoreRetryAfter() interface{}
+	SetRenewalInfoIgnoreRetryAfter(val interface{})
+	RenewalInfoIgnoreRetryAfterInput() interface{}
+	RenewalInfoMaxSleep() *float64
+	SetRenewalInfoMaxSleep(val *float64)
+	RenewalInfoMaxSleepInput() *float64
+	RenewalInfoRetryAfter() *string
+	RenewalInfoWindowEnd() *string
+	RenewalInfoWindowSelected() *string
+	RenewalInfoWindowStart() *string
 	RevokeCertificateOnDestroy() interface{}
 	SetRevokeCertificateOnDestroy(val interface{})
 	RevokeCertificateOnDestroyInput() interface{}
@@ -132,6 +143,9 @@ type Certificate interface {
 	TerraformResourceType() *string
 	TlsChallenge() CertificateTlsChallengeOutputReference
 	TlsChallengeInput() *CertificateTlsChallenge
+	UseRenewalInfo() interface{}
+	SetUseRenewalInfo(val interface{})
+	UseRenewalInfoInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -202,10 +216,13 @@ type Certificate interface {
 	ResetPreferredChain()
 	ResetProfile()
 	ResetRecursiveNameservers()
+	ResetRenewalInfoIgnoreRetryAfter()
+	ResetRenewalInfoMaxSleep()
 	ResetRevokeCertificateOnDestroy()
 	ResetRevokeCertificateReason()
 	ResetSubjectAlternativeNames()
 	ResetTlsChallenge()
+	ResetUseRenewalInfo()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -814,6 +831,96 @@ func (j *jsiiProxy_Certificate) RecursiveNameserversInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) RenewalInfoExplanationUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"renewalInfoExplanationUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoIgnoreRetryAfter() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"renewalInfoIgnoreRetryAfter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoIgnoreRetryAfterInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"renewalInfoIgnoreRetryAfterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoMaxSleep() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"renewalInfoMaxSleep",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoMaxSleepInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"renewalInfoMaxSleepInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoRetryAfter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"renewalInfoRetryAfter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoWindowEnd() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"renewalInfoWindowEnd",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoWindowSelected() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"renewalInfoWindowSelected",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Certificate) RenewalInfoWindowStart() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"renewalInfoWindowStart",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Certificate) RevokeCertificateOnDestroy() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -924,8 +1031,28 @@ func (j *jsiiProxy_Certificate) TlsChallengeInput() *CertificateTlsChallenge {
 	return returns
 }
 
+func (j *jsiiProxy_Certificate) UseRenewalInfo() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useRenewalInfo",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate} Resource.
+func (j *jsiiProxy_Certificate) UseRenewalInfoInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useRenewalInfoInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate(scope constructs.Construct, id *string, config *CertificateConfig) Certificate {
 	_init_.Initialize()
 
@@ -943,7 +1070,7 @@ func NewCertificate(scope constructs.Construct, id *string, config *CertificateC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.33.0/docs/resources/certificate acme_certificate} Resource.
+// Create a new {@link https://registry.terraform.io/providers/vancluever/acme/2.34.0/docs/resources/certificate acme_certificate} Resource.
 func NewCertificate_Override(c Certificate, scope constructs.Construct, id *string, config *CertificateConfig) {
 	_init_.Initialize()
 
@@ -1176,6 +1303,28 @@ func (j *jsiiProxy_Certificate)SetRecursiveNameservers(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Certificate)SetRenewalInfoIgnoreRetryAfter(val interface{}) {
+	if err := j.validateSetRenewalInfoIgnoreRetryAfterParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"renewalInfoIgnoreRetryAfter",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetRenewalInfoMaxSleep(val *float64) {
+	if err := j.validateSetRenewalInfoMaxSleepParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"renewalInfoMaxSleep",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Certificate)SetRevokeCertificateOnDestroy(val interface{}) {
 	if err := j.validateSetRevokeCertificateOnDestroyParameters(val); err != nil {
 		panic(err)
@@ -1205,6 +1354,17 @@ func (j *jsiiProxy_Certificate)SetSubjectAlternativeNames(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"subjectAlternativeNames",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Certificate)SetUseRenewalInfo(val interface{}) {
+	if err := j.validateSetUseRenewalInfoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"useRenewalInfo",
 		val,
 	)
 }
@@ -1780,6 +1940,22 @@ func (c *jsiiProxy_Certificate) ResetRecursiveNameservers() {
 	)
 }
 
+func (c *jsiiProxy_Certificate) ResetRenewalInfoIgnoreRetryAfter() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRenewalInfoIgnoreRetryAfter",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetRenewalInfoMaxSleep() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRenewalInfoMaxSleep",
+		nil, // no parameters
+	)
+}
+
 func (c *jsiiProxy_Certificate) ResetRevokeCertificateOnDestroy() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1808,6 +1984,14 @@ func (c *jsiiProxy_Certificate) ResetTlsChallenge() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetTlsChallenge",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Certificate) ResetUseRenewalInfo() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetUseRenewalInfo",
 		nil, // no parameters
 	)
 }

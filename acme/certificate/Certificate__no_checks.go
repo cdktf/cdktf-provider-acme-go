@@ -187,6 +187,14 @@ func (j *jsiiProxy_Certificate) validateSetRecursiveNameserversParameters(val *[
 	return nil
 }
 
+func (j *jsiiProxy_Certificate) validateSetRenewalInfoIgnoreRetryAfterParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetRenewalInfoMaxSleepParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Certificate) validateSetRevokeCertificateOnDestroyParameters(val interface{}) error {
 	return nil
 }
@@ -196,6 +204,10 @@ func (j *jsiiProxy_Certificate) validateSetRevokeCertificateReasonParameters(val
 }
 
 func (j *jsiiProxy_Certificate) validateSetSubjectAlternativeNamesParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Certificate) validateSetUseRenewalInfoParameters(val interface{}) error {
 	return nil
 }
 
