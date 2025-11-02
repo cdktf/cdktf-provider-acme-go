@@ -5,7 +5,7 @@ package certificate
 
 
 type CertificateHttpMemcachedChallenge struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.37.0/docs/resources/certificate#hosts Certificate#hosts}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/vancluever/acme/2.38.0/docs/resources/certificate#hosts Certificate#hosts}.
 	Hosts *[]*string `field:"required" json:"hosts" yaml:"hosts"`
 }
 
