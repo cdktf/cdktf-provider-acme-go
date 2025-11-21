@@ -43,11 +43,11 @@ func (c *jsiiProxy_CertificateDnsChallengeOutputReference) validateGetStringMapA
 	return nil
 }
 
-func (c *jsiiProxy_CertificateDnsChallengeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (c *jsiiProxy_CertificateDnsChallengeOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (c *jsiiProxy_CertificateDnsChallengeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CertificateDnsChallengeOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

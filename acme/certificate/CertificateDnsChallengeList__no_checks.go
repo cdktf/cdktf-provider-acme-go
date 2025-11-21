@@ -15,7 +15,7 @@ func (c *jsiiProxy_CertificateDnsChallengeList) validateGetParameters(index *flo
 	return nil
 }
 
-func (c *jsiiProxy_CertificateDnsChallengeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CertificateDnsChallengeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

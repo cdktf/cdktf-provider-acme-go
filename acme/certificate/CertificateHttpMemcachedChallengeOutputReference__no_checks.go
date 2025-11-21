@@ -43,11 +43,11 @@ func (c *jsiiProxy_CertificateHttpMemcachedChallengeOutputReference) validateGet
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpMemcachedChallengeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (c *jsiiProxy_CertificateHttpMemcachedChallengeOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (c *jsiiProxy_CertificateHttpMemcachedChallengeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CertificateHttpMemcachedChallengeOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 
